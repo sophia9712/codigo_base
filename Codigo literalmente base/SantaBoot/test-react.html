@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>SantaBoot - Test</title>
+        <link rel="stylesheet" href="./assets/cssantaboot.css" />
+    </head>
+    <body>
+        <div id="root"></div>
+        <script type="module" src="./assets/santaboot.js"></script>
+
+        <script>
+            // Verificar que React cargó
+            setTimeout(() => {
+                if (document.getElementById("root").children.length > 0) {
+                    console.log("✅ React cargó correctamente");
+                    console.log("Estructura:", document.getElementById("root").innerHTML.substring(0, 200));
+                } else {
+                    console.log("❌ React no cargó");
+                }
+            }, 2000);
+        </script>
+    </body>
+</html>
